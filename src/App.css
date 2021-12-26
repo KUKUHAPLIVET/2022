@@ -3,20 +3,23 @@
     padding: 0;
     box-sizing: border-box;
     margin: auto;
+    background-color: grey;
 }
 .App {
     text-align: center;
 }
 
+
+
 .app-wrapper {
     display: grid;
     grid-template-areas:
-            "h h  "
+            "h h "
             "n c "
             "f f ";
-    grid-template-columns: 3fr 10fr;
-    row-gap: 10px;
-    align-content: center;
+    grid-template-rows: 100px 700px 200px;
+    grid-template-columns:100px 500px ;
+
 }
 
 .header {
@@ -31,7 +34,6 @@
 }
 
 .nav {
-    padding: 20px;
     grid-area: n;
 }
 

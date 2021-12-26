@@ -1,24 +1,36 @@
 import * as React from 'react'
-import logo from './logo.svg';
 import './App.css';
-import Button from '@mui/material/Button'
 import Profile from "./components/Content/Profile/profile";
 import NavBar from "./components/NavBar/navBar";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/Footer";
-const App = () => {
+import Dialogs from "./components/Content/Dialogs/Dialogs";
+import {Route} from "react-router-dom";
+
+
+const App = (props) => {
     return (
-        <div className="app-wrapper">
-            <Header className='header'/>
+        <div>
 
+            <div className="app-wrapper">
+                <div className='header'>
+                    <Header/>
+                </div>
+                <div className='nav'>
+                    <NavBar/>
+                </div>
+                <div className="content">
+                    < Route path='/dialogs' render={() => <Dialogs messages={props.messages} dialogsData={props.dialogsData}/>}/>
+                    < Route path='/profile' render={() => <Profile posts={props.posts}/>}/>
+                </div>
+                <div className='footer'>
+                    <Footer/>
+                </div>
 
-            <NavBar className='nav'/>
+            </div>
 
-            <Profile className='content'/>
-            <Footer className='footer'/>
+        </div>)
 
-        </div>
-    );
 }
 
 export default App;

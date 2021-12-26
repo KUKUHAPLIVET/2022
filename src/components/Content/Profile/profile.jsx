@@ -1,7 +1,8 @@
+import MyPost from "./MyPosts/myPosts";
 
-const Profile =() =>{
+const Profile =(props) =>{
     return(
-        <div>Content</div>
+        <div> <MyPost posts={props.posts}/> </div>
     )
 }
 export default Profile

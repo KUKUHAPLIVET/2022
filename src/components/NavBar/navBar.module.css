@@ -1,0 +1,17 @@
+.nav {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+.item {
+    text-decoration: none;
+    color: black;
+}
+.item:active{
+    color: white;
+}
+.active {
+    color: gold;
+    text-decoration: none;
+}

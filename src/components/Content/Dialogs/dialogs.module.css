@@ -1,0 +1,21 @@
+.dialogsMain{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogs{
+
+}
+.dialogsItem a{
+    text-decoration: none;
+}
+.activeName{
+    color: #8b0606;
+}
+.messages{
+    color: white;
+
+}
+.message{
+
+}
